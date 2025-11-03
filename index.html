@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD231 Course Home • assignments, chamber project links, and dynamic course tracker.">
+    <meta name="author" content="Celestine Ahfua">
+    <title>WDD231 • Course Home</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Home">
+            <svg class="logo" viewBox="0 0 120 32" role="img" aria-labelledby="logoTitle">
+                <title id="logoTitle">WDD231</title>
+                <rect x="1" y="1" width="30" height="30" rx="6" class="logo-badge" />
+                <text x="16" y="21" text-anchor="middle" class="logo-text">W</text>
+                <text x="35" y="22" class="logo-word">DD231</text>
+            </svg>
+            <span class="student-name">Celestine Ahfua</span>
+        </a>
+
+        <button id="menu" class="hamburger" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav id="primary-nav" class="nav" aria-label="Primary">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chamber/" id="link-chamber">Chamber</a></li>
+                <li><a href="final/" id="link-final">Final</a></li>
+                <li><a href="https://byui.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+    <h1>Home</h1>
+    
+    <div class="top-grid">
+        <section class="panel">
+            <h2 class="bar">About Me</h2>
+            <p>
+                Hi! I’m Celestine Ahfua, a student developer from Western Samoa majoring in Software Development.
+                I’ll complete my first certificate in Web and Computer Programming, which marks the beginning of my journey toward
+                becoming a full-stack developer.
+                I have a deep passion for creating digital solutions that make life easier, more connected, and more meaningful.
+                My goal is to use the skills I’m learning to strengthen the technology and development field in Samoa — helping small
+                businesses and organizations
+                build strong online platforms that reflect their unique stories and connect them with audiences around the world.
+                Beyond coding, I’m inspired by the idea of empowering others through technology — whether that means helping local
+                entrepreneurs launch
+                e-commerce websites, improving access to education through digital tools, or showcasing the beauty and culture of Samoa
+                to a global audience.
+                I truly believe that with the right technology, our small island nation can make a big impact on the world stage while
+                preserving the values that make us who we are.
+            </p>
+        </section>
+    
+        <section class="panel">
+            <h2 class="bar">Student Photo</h2>
+            <img src="images/profile.jpeg" alt="Photo of Celestine Ahfua" width="300" height="300"
+                loading="lazy">
+        </section>
+    </div>
+    
+    <section class="panel courses">
+        <h2 class="bar">Web Certificate Courses</h2>
+    
+        <div class="filters" role="group" aria-label="Course filters">
+            <button class="chip is-active" data-filter="all">All</button>
+            <button class="chip" data-filter="CSE">CSE</button>
+            <button class="chip" data-filter="WDD">WDD</button>
+        </div>
+    
+        <div id="courseGrid" class="grid" aria-live="polite"></div>
+    
+        <p class="totals">The total credits for courses listed above is <strong id="creditTotal">0</strong>.</p>
+    </section>
+    
+    <section class="panel">
+        <h2 class="bar">About This Site</h2>
+        <ul>
+            <li>Semantic, valid HTML and CSS with responsive layouts.</li>
+            <li>Accessible navigation with keyboard support, focus states, and wayfinding.</li>
+            <li>Images/SVG optimized; page weight target ≤ 500 kB on first load.</li>
+        </ul>
+    </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="socials">
+            <a href="https://github.com/cahfua/wdd231" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.34-1.77-1.34-1.77-1.1-.74.08-.73.08-.73 1.22.09 1.87 1.25 1.87 1.25 1.08 1.86 2.84 1.32 3.53 1.01.11-.78.42-1.32.76-1.63-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.25-3.22-.13-.3-.54-1.53.12-3.19 0 0 1.01-.32 3.3 1.23a11.52 11.52 0 0 1 6 0c2.28-1.55 3.3-1.23 3.3-1.23.67 1.66.26 2.89.13 3.19.78.84 1.25 1.9 1.25 3.22 0 4.61-2.8 5.62-5.47 5.92.43.37.81 1.1.81 2.22v3.3c0 .32.21.7.82.58A12 12 0 0 0 12 .5Z" /></svg>
+            </a>
+            <a href="https://linkedin.com/in/celestine-ahfua-6a4829356" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.5 8h4V24h-4V8ZM8 8h3.8v2.2h.06C12.7 8.8 14.2 8 16.3 8 21 8 22 11 22 15.2V24h-4v-7.6c0-1.8 0-4.1-2.5-4.1-2.6 0-3 2-3 4V24H8V8Z" /></svg>
+            </a>
+            <a href="https://x.com/" target="_blank" rel="noopener" aria-label="Twitter / X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.2 2H21l-6.5 7.4L22.3 22h-6.7l-4.7-6.6-5.4 6.6H2.6l7-8.5L1.8 2h6.9l4.3 6 5.2-6Z" /></svg>
+            </a>
+        </div>
+
+        <p>© <span id="year"></span> Celestine Ahfua — Western Samoa</p>
+        <p id="lastModified" class="muted"></p>
+    </footer>
+</body>
+</html>
