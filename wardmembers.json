@@ -1,0 +1,43 @@
+{
+  "familyName": "Ahfua",
+  "movedIn": "2023-08-10",
+  "numberOfMembers": 7,
+  "visitedByBishopric": true,
+  "members": [
+    {
+      "name": "Celestine Tasia Joaima Ahfua",
+      "gender": "Female",
+      "birthdate": "1997-07-02"
+    },
+    {
+      "name": "Jarron Whatene Ahfua",
+      "gender": "Male",
+      "birthdate": "1995-10-29"
+    },
+    {
+      "name": "Jagger Mani Ahfua",
+      "gender": "Male",
+      "birthdate": "1993-07-23"
+    },
+    {
+      "name": "John Brent Chris Ahfua",
+      "gender": "Male",
+      "birthdate": "1991-11-19"
+    },
+    {
+      "name": "Trustine Anelaokalani Mendoza",
+      "gender": "Female",
+      "birthdate": "1991-09-13"
+    },
+    {
+      "name": "Polilisimaima Ahfua",
+      "gender": "Female",
+      "birthdate": "1967-06-25"
+    },
+    {
+      "name": "John Mani Ahfua",
+      "gender": "Male",
+      "birthdate": "1966-03-20"
+    }
+  ]
+}

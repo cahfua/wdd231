@@ -1,0 +1,100 @@
+:root {
+    --bg: #f7f3ed;
+    --panel: #ffffff;
+    --ink: #3b2f2f;
+    --muted: #6b5f5b;
+    --accent: #8b5e3c;
+    --accent-dark: #5a3b22;
+    --border: #e0d6cd;
+    --shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+}
+
+/* Body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg);
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: var(--accent);
+    color: #fff;
+    text-align: center;
+    padding: 1.2rem;
+    border-bottom: 4px solid var(--accent-dark);
+}
+
+h1 {
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Layout */
+main {
+    flex: 1;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.4rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Cards */
+section {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* Text */
+section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-dark);
+    font-weight: 600;
+}
+
+section p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    line-height: 1.35;
+}
+
+/* Portrait Styling */
+section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--accent);
+    color: #fff;
+    border-top: 4px solid var(--accent-dark);
+}
