@@ -1,7 +1,5 @@
 #main { max-width: 1200px; margin: 0 auto; padding: 1rem; }
 
-h1 { color: var(--text); }
-
 .view-toggle {
   display: flex;
   gap: .5rem;
@@ -71,4 +69,8 @@ h1 { color: var(--text); }
   display: flex;
   flex-wrap: wrap;
   gap: .6rem 1rem;
+}
+
+h1 {
+  color: var(--text);
 }
