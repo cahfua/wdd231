@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="description"
+        content="Discover local businesses in the Western Samoa Chamber of Commerce directory. Filter between grid and list views." />
+    <meta name="author" content="Celestine Ahfua" />
+    <meta property="og:title" content="Western Samoa Chamber • Directory" />
+    <meta property="og:description" content="Explore the Western Samoa Chamber of Commerce business directory." />
+    <meta property="og:image" content="https://cahfua.github.io/wdd231/chamber/images/social-card.jpg" />
+    <meta property="og:url" content="https://cahfua.github.io/wdd231/chamber/directory.html" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="../styles/normalize.css">1
+    <link rel="stylesheet" href="../styles/small.css">
+    <link rel="stylesheet" href="../styles/larger.css">
+    <link rel="stylesheet" href="styles/directory.css">
+
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="../scripts/dates.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+
+    <title>Western Samoa Chamber • Business Directory</title>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="directory.html" aria-label="Home">
+            <svg class="logo" viewBox="0 0 120 32" role="img" aria-labelledby="logoTitle">
+                <title id="logoTitle">WDD231</title>
+                <rect x="1" y="1" width="30" height="30" rx="6" class="logo-badge" />
+                <text x="16" y="21" text-anchor="middle" class="logo-text">W</text>
+                <text x="35" y="22" class="logo-word">Chamber</text>
+            </svg>
+            <span class="student-name">Western Samoa Chamber</span>
+        </a>
+
+        <button id="menu" class="hamburger" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav id="primary-nav" class="nav" aria-label="Primary">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="directory.html" aria-current="page" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <h1>Member Directory</h1>
+
+        <div class="view-toggle" role="group" aria-label="Directory view">
+            <button id="gridBtn" class="chip is-active" aria-pressed="true">Grid</button>
+            <button id="listBtn" class="chip" aria-pressed="false">List</button>
+        </div>
+
+        <section id="memberContainer" class="grid" aria-live="polite"></section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="contact">
+            <p><strong>Western Samoa Chamber of Commerce</strong></p>
+            <p>Apia, Samoa • info@wschamber.example • +685 123-4567</p>
+        </div>
+        <div class="dev-meta">
+            <p>© <span id="year"></span> Celestine Ahfua • WDD 231</p>
+            <p class="muted"><span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

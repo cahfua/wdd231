@@ -51,12 +51,8 @@ if (kind === 'WDD' || kind === 'CSE') list = courses.filter(c => c.subject === k
 render(list);
 }
 
-
-// Init
 render(courses);
 
-
-// Filter UI
 filterButtons.forEach(btn => {
 btn.addEventListener('click', () => {
 filterButtons.forEach(b => b.classList.remove('is-active'));

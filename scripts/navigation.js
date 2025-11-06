@@ -8,7 +8,6 @@ menuBtn.setAttribute('aria-expanded', String(open));
 });
 
 
-// Wayfinding helper: add .active if href matches current pathname
 const links = document.querySelectorAll('#primary-nav a');
 links.forEach(a => {
 if (a.getAttribute('href') && location.pathname.endsWith(a.getAttribute('href'))) {

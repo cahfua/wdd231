@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Island Breeze Cafe",
+    "address": "Beach Rd, Apia, Samoa",
+    "phone": "+685 123-1001",
+    "website": "https://islandbreezecafe.example",
+    "image": "island-breeze.png",
+    "membershipLevel": 3,
+    "category": "Food & Drink"
+  },
+  {
+    "name": "Savai'i Tours Co.",
+    "address": "Main Wharf, Salelologa, Savai'i",
+    "phone": "+685 123-2002",
+    "website": "https://savaiitours.example",
+    "image": "savaii-tours.png",
+    "membershipLevel": 2,
+    "category": "Travel"
+  },
+  {
+    "name": "Pacific Crafts Collective",
+    "address": "Market St, Apia",
+    "phone": "+685 123-3003",
+    "website": "https://pacificcrafts.example",
+    "image": "pacific-crafts.png",
+    "membershipLevel": 1,
+    "category": "Artisans"
+  },
+  {
+    "name": "Oceanview Resort",
+    "address": "Cape Rd, Upolu",
+    "phone": "+685 123-4004",
+    "website": "https://oceanviewresort.example",
+    "image": "oceanview.png",
+    "membershipLevel": 3,
+    "category": "Hospitality"
+  },
+  {
+    "name": "Samoa Bike Rentals",
+    "address": "Beach Rd, Apia",
+    "phone": "+685 123-5005",
+    "website": "https://samoabikes.example",
+    "image": "bike-rentals.png",
+    "membershipLevel": 1,
+    "category": "Recreation"
+  },
+  {
+    "name": "Lagoon IT Services",
+    "address": "Tech Park, Apia",
+    "phone": "+685 123-6006",
+    "website": "https://lagoonit.example",
+    "image": "lagoon-it.png",
+    "membershipLevel": 2,
+    "category": "Technology"
+  },
+  {
+    "name": "Coral Reef Bank",
+    "address": "Finance Ave, Apia",
+    "phone": "+685 123-7007",
+    "website": "https://coralreefbank.example",
+    "image": "coral-reef-bank.png",
+    "membershipLevel": 2,
+    "category": "Financial"
+  }
+]
