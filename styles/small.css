@@ -22,6 +22,7 @@ body {
     color: var(--text);
     background: var(--bg);
     line-height: 1.6;
+    overflow-x: hidden
 }
 
 
@@ -151,12 +152,12 @@ main {
 .course {
     border: 1px solid #e5e7eb;
     border-radius: .75rem;
-    padding: .75rem
+    padding: .75rem;
 }
 
 .course h3 {
     margin: .25rem 0 .5rem;
-    font-size: 1rem
+    font-size: .95rem;
 }
 
 .badge {
@@ -174,7 +175,7 @@ main {
     background: #ecfdf5
 }
 
-.completed .badge {
+.completed {
     background: var(--text);
     color: var(--primary-contrast)
 }
@@ -220,10 +221,6 @@ img,
 svg {
     max-width: 100%;
     height: auto
-}
-
-body {
-    overflow-x: hidden
 }
 
 /* ==== Wireframe look ==== */
@@ -294,13 +291,6 @@ body {
     gap: .5rem;
     margin-top: 1rem;
 }
-
-.course{
-  border-radius: .4rem;
-  padding: .5rem .6rem;
-}
-.course h3{ font-size: .95rem; margin: .1rem 0 .25rem; }
-.badge{ font-size: .7rem; }
 
 /* Totals line like the wireframe */
 .totals{
