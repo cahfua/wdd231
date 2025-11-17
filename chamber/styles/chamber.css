@@ -120,7 +120,7 @@
 
 /* CTA button */
 
-.btn-primary {
+.btn-cta {
   display: inline-block;
   padding: 0.7rem 1.4rem;
   border-radius: 999px;
@@ -130,8 +130,8 @@
   font-weight: 600;
 }
 
-.btn-primary:hover,
-.btn-primary:focus-visible {
+.btn-cta:hover,
+.btn-cta:focus-visible {
   background-color: var(--accent-strong, #1d4ed8);
 }
 
