@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <meta name="description"
-        content="Discover local businesses in the Western Samoa Chamber of Commerce directory. Filter between grid and list views." />
+        content="Welcome to the Western Samoa Chamber of Commerce. Connect with local businesses, explore events, and discover the benefits of joining the chamber." />
     <meta name="author" content="Celestine Ahfua" />
 
-    <meta property="og:title" content="Western Samoa Chamber • Directory" />
-    <meta property="og:description" content="Explore the Western Samoa Chamber of Commerce business directory." />
-    <meta property="og:image" content="https://cahfua.github.io/wdd231/chamber/images/social-card.jpg" />
-    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:title" content="Western Samoa Chamber • Home" />
+    <meta property="og:description"
+        content="Discover local businesses and the benefits of joining the Western Samoa Chamber of Commerce." />
+    <meta property="og:image" content="https://cahfua.github.io/wdd231/chamber/images/social-card.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:url" content="https://cahfua.github.io/wdd231/chamber/directory.html" />
+    <meta property="og:url" content="https://cahfua.github.io/wdd231/chamber/index.html" />
     <meta property="og:type" content="website" />
 
     <link rel="icon" href="../favicon.ico" />
@@ -31,9 +32,10 @@
 
     <script src="../scripts/navigation.js" defer></script>
     <script src="../scripts/dates.js" defer></script>
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
 
-    <title>Western Samoa Chamber • Business Directory</title>
+    <title>Western Samoa Chamber • Home</title>
 </head>
 
 <body>
@@ -54,23 +56,76 @@
 
         <nav id="primary-nav" class="nav" aria-label="Primary">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html" aria-current="page" class="active">Directory</a></li>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="main">
-        <h1>Member Directory</h1>
+    <main id="main" class="home-main">
+        <section class="hero">
+            <picture>
+                <img src="images/hero-samoa.png" alt="Two people shaking hands with a Samoan village background"
+                    width="1600" height="800" loading="eager" />
+            </picture>
 
-        <div class="view-toggle" role="group" aria-label="Directory view">
-            <button id="gridBtn" class="chip is-active" aria-pressed="true">Grid</button>
-            <button id="listBtn" class="chip" aria-pressed="false">List</button>
-        </div>
+            <div class="hero-overlay">
+                <h1>Connecting Businesses in Western Samoa</h1>
+                <p>
+                    Join a community of passionate business owners working together to
+                    strengthen our islands, support growth, and build opportunity.
+                </p>
+                <a class="btn-primary" href="join.html">Join the Chamber</a>
+            </div>
+        </section>
 
-        <section id="memberContainer" class="grid" aria-live="polite"></section>
+        <section class="home-grid">
+            <section class="card current-events">
+                <h2>Current Events</h2>
+                <ul>
+                    <li>
+                        <h3>Small Business Networking Breakfast</h3>
+                        <p>Friday • 8:00 AM • Apia Conference Center</p>
+                    </li>
+                    <li>
+                        <h3>Tourism &amp; Hospitality Roundtable</h3>
+                        <p>Next Tuesday • 3:00 PM • Chamber Offices</p>
+                    </li>
+                    <li>
+                        <h3>Business Grants Information Night</h3>
+                        <p>End of month • Online webinar</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="card weather">
+                <h2>Local Weather</h2>
+                <div id="current-weather" class="weather-current">
+                    <p class="temp">
+                        <span id="current-temp">--</span><span class="unit">°C</span>
+                    </p>
+                    <p id="current-desc">Loading weather...</p>
+                </div>
+
+                <div id="weather-forecast" class="weather-forecast">
+                </div>
+
+                <p class="weather-source">
+                    Powered by
+                    <a href="https://openweathermap.org/" target="_blank" rel="noopener">
+                        OpenWeatherMap
+                    </a>
+                </p>
+            </section>
+
+            <section class="card spotlights">
+                <h2>Member Spotlights</h2>
+                <div id="spotlightContainer" class="spotlight-container">
+                </div>
+            </section>
+        </section>
     </main>
 
     <footer class="site-footer">
