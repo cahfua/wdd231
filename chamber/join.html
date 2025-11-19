@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Apply for membership with the Western Samoa Chamber of Commerce. Fill out the application form and select a membership level that fits your organization.">
 
     <title>Western Samoa Chamber • Join</title>
 
@@ -15,6 +17,7 @@
 
     <script src="../scripts/navigation.js" defer></script>
     <script src="../scripts/dates.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 </head>
 
 <body>
@@ -43,10 +46,137 @@
         </nav>
     </header>
 
-    <main id="main">
-        <h1>Join the Chamber</h1>
-        <p>This membership form will be created in an upcoming assignment. For now, this placeholder ensures navigation
-            works properly.</p>
+    <main id="main" class="join-layout">
+        <section class="join-form-section">
+            <h1>Join the Chamber</h1>
+            <p>Fill out the application below to apply for membership with the Western Samoa Chamber of Commerce.</p>
+
+            <form method="get" action="./thankyou.html" class="join-form">
+            <label>
+                First Name*
+                <input 
+                    type="text" 
+                    name="firstName" 
+                    required autocomplete="given-name" 
+                    title="Enter your first name" />
+            </label>
+            
+            <label>
+                Last Name*
+                <input 
+                    type="text" 
+                    name="lastName" 
+                    required autocomplete="family-name" 
+                    title="Enter your last name" />
+            </label>
+            
+            <label>
+                Organizational Title
+                <input 
+                    type="text" 
+                    name="orgTitle" 
+                    autocomplete="organization-title" 
+                    title="Enter your title in the organization"
+                    pattern="[A-Za-z- ]{7,}" 
+                    placeholder="Marketing Manager" />
+            </label>
+            
+            <label>
+                Email*
+                <input 
+                    type="email"
+                    name="email" 
+                    required autocomplete="email" 
+                    title="Enter a valid email address"
+                    placeholder="name@example.com" />
+            </label>
+            
+            <label>
+                Mobile Phone*
+                <input 
+                    type="tel" 
+                    name="phone" 
+                    required autocomplete="tel" 
+                    title="Enter your mobile phone number"
+                    placeholder="555-555-5555" />
+            </label>
+            
+            <label>
+                Business / Organization Name*
+                <input 
+                    type="text" 
+                    name="organization" 
+                    required autocomplete="organization"
+                    title="Enter your business or organization name" />
+            </label>
+            
+            <label>
+                Membership Level*
+                <select name="membership" required title="Select a membership level">
+                    <option value="">Select a level…</option>
+                    <option value="np">NP Membership (Non-profit)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+            </label>
+            
+            <label>
+                Business / Organization Description
+                    <textarea 
+                        name="description"
+                        title="Brief description of your business or organization"
+                        rows="4"></textarea>
+                </label>
+            
+                    <input 
+                        type="hidden" 
+                        name="timestamp" 
+                        id="timestamp" />
+            
+                <input 
+                    type="submit" 
+                    value="Submit Application" />
+            </form>
+        </section>
+
+        <aside class="membership-levels">
+            <h2>Membership Levels</h2>
+        
+            <div class="membership-cards">
+                <article class="membership-card" data-level="np">
+                    <h3>NP Membership</h3>
+                    <p>For non-profit organizations. No membership fee.</p>
+                    <button type="button" data-open-modal="np-modal">
+                        View Benefits
+                    </button>
+                </article>
+        
+                <article class="membership-card" data-level="bronze">
+                    <h3>Bronze Membership</h3>
+                    <p>Perfect for small businesses getting started.</p>
+                    <button type="button" data-open-modal="bronze-modal">
+                        View Benefits
+                    </button>
+                </article>
+        
+                <article class="membership-card" data-level="silver">
+                    <h3>Silver Membership</h3>
+                    <p>More visibility, more perks, and more support.</p>
+                    <button type="button" data-open-modal="silver-modal">
+                        View Benefits
+                    </button>
+                </article>
+        
+                <article class="membership-card" data-level="gold">
+                    <h3>Gold Membership</h3>
+                    <p>Premium exposure, top-tier benefits, and priority.</p>
+                    <button type="button" data-open-modal="gold-modal">
+                        View Benefits
+                    </button>
+                </article>
+            </div>
+        </aside>
     </main>
 
     <footer class="site-footer">
@@ -74,6 +204,46 @@
         <p>© <span id="year"></span> Celestine Ahfua — Western Samoa</p>
         <p id="lastModified" class="muted"></p>
     </footer>
-    </body>
+
+    <!-- Membership Benefit Modals -->
+    <dialog id="np-modal">
+        <h2>NP Membership Benefits</h2>
+        <ul>
+            <li>No membership fee for qualified non-profit organizations</li>
+            <li>Listing in the chamber directory</li>
+            <li>Access to community training and networking events</li>
+        </ul>
+        <button type="button" data-close-modal>Close</button>
+    </dialog>
     
-    </html>
+    <dialog id="bronze-modal">
+        <h2>Bronze Membership Benefits</h2>
+        <ul>
+            <li>All NP benefits</li>
+            <li>Discounted event fees</li>
+            <li>Quarterly networking spotlight</li>
+        </ul>
+        <button type="button" data-close-modal>Close</button>
+    </dialog>
+    
+    <dialog id="silver-modal">
+        <h2>Silver Membership Benefits</h2>
+        <ul>
+            <li>All Bronze benefits</li>
+            <li>Homepage sidebar spotlight</li>
+            <li>Priority booth at chamber events</li>
+        </ul>
+        <button type="button" data-close-modal>Close</button>
+    </dialog>
+    
+    <dialog id="gold-modal">
+        <h2>Gold Membership Benefits</h2>
+        <ul>
+            <li>All Silver benefits</li>
+            <li>Hero spotlight on the home page</li>
+            <li>Exclusive leadership roundtable invitations</li>
+        </ul>
+        <button type="button" data-close-modal>Close</button>
+    </dialog>
+</body>
+</html>

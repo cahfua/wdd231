@@ -71,7 +71,7 @@
   gap: .6rem 1rem;
 }
 
-/* === HOME PAGE LAYOUT START === */
+/* === HOME PAGE LAYOUT === */
 
 .home-main {
   max-width: 1200px;
@@ -259,4 +259,333 @@
   }
 }
 
-/* === HOME PAGE LAYOUT END === */
+/* ========== JOIN & THANK YOU PAGES ========== */
+
+/* Shared utility */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Main wrapper */
+#main.join-layout,
+#main.thankyou-layout {
+  margin-inline: auto;
+  max-width: 1100px;
+  padding: 1.5rem 1rem 2.5rem;
+}
+
+/* ========= JOIN PAGE ========= */
+
+.join-layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Form */
+.join-form-section {
+  background-color: var(--surface, #ffffff);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow, 0 4px 12px rgba(0, 0, 0, 0.05));
+}
+
+.join-form-section h1 {
+  margin-bottom: 0.5rem;
+}
+
+.join-form-section>p {
+  margin-bottom: 1.25rem;
+  color: var(--muted, #555);
+}
+
+.join-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.join-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #c9c9c9;
+  font: inherit;
+  background-color: #fafafa;
+  color: var(--text, #111);
+}
+
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus {
+  outline: 2px solid #6b4ce6;
+  outline-offset: 1px;
+  border-color: #6b4ce6;
+  background-color: #fff;
+}
+
+.join-form textarea {
+  min-height: 6rem;
+  resize: vertical;
+}
+
+.join-form input[type="submit"] {
+  margin-top: 0.75rem;
+  cursor: pointer;
+  font-weight: 700;
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.7rem;
+  background: linear-gradient(135deg,
+      var(--brand, #1e3a8a),
+      var(--brand-700, #1d2678));
+  color: #ffffff;
+  justify-self: flex-start;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.join-form input[type="submit"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  opacity: 0.97;
+}
+
+.join-form input[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Membership levels */
+
+.membership-levels {
+  padding: 1rem 0.25rem;
+}
+
+.membership-levels h2 {
+  margin-bottom: 0.75rem;
+}
+
+.membership-cards {
+  display: grid;
+  gap: 1rem;
+}
+
+.membership-card {
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  background-color: var(--surface, #ffffff);
+  box-shadow: var(--shadow, 0 3px 10px rgba(0, 0, 0, 0.04));
+
+  /*animation*/
+  opacity: 0;
+  transform: translateY(10px);
+  animation: cardFadeIn 0.7s ease-out forwards;
+}
+
+/* delays */
+.membership-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.membership-card:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.membership-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.membership-card:nth-child(4) {
+  animation-delay: 0.55s;
+}
+
+.membership-card h3 {
+  margin-bottom: 0.35rem;
+}
+
+.membership-card p {
+  margin-bottom: 0.75rem;
+  color: var(--muted, #555);
+}
+
+/* Card button */
+.membership-card button {
+  margin-top: 0.25rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: #f0e9ff;
+  color: #3b2a92;
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.membership-card button:hover {
+  background-color: #e0d2ff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.membership-card button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Animation keyframes */
+@keyframes cardFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Two-column layout on medium+ screens */
+@media (min-width: 768px) {
+  .join-layout {
+    grid-template-columns: 2fr 1.5fr;
+    align-items: flex-start;
+  }
+
+  .membership-levels {
+    padding-left: 0.5rem;
+  }
+}
+
+/* ========= Dialog / Modal Styles ========= */
+
+dialog {
+  border: none;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  max-width: 28rem;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+  background: var(--surface, #ffffff);
+  color: var(--text, #111);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+dialog h2 {
+  margin-bottom: 0.75rem;
+}
+
+dialog ul {
+  margin: 0 0 1rem 1.25rem;
+  padding: 0;
+}
+
+dialog li {
+  margin-bottom: 0.25rem;
+}
+
+dialog [data-close-modal] {
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #eee;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+dialog [data-close-modal]:hover {
+  background-color: #ddd;
+}
+
+/* ========= THANK YOU PAGE ========= */
+
+.thankyou-layout {
+  display: flex;
+  justify-content: center;
+}
+
+.thankyou-section {
+  background-color: var(--surface, #ffffff);
+  padding: 1.75rem 1.5rem 2.25rem;
+  border-radius: 0.75rem;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: var(--shadow, 0 6px 18px rgba(0, 0, 0, 0.05));
+}
+
+.thankyou-section h1 {
+  margin-bottom: 0.5rem;
+}
+
+.thankyou-section>p {
+  margin-bottom: 1.5rem;
+  color: var(--muted, #555);
+}
+
+/* Summary definition list */
+.summary-list {
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem 1.5rem;
+}
+
+.summary-list>div {
+  display: grid;
+  grid-template-columns: minmax(8rem, 12rem) 1fr;
+  column-gap: 1.25rem;
+  align-items: baseline;
+}
+
+.summary-list dt {
+  font-weight: 700;
+  color: var(--text, #333);
+}
+
+.summary-list dd {
+  margin: 0;
+  color: var(--muted, #444);
+}
+
+/* Two-column summary on larger screens */
+@media (min-width: 640px) {
+  .summary-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .summary-list>div {
+    grid-template-columns: 1fr;
+  }
+}
+
+.thankyou-section a {
+  color: var(--brand, #1e3a8a);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.thankyou-section a:hover {
+  text-decoration: underline;
+}
