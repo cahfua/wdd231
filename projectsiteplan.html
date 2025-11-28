@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Meta description for SEO -->
+    <meta name="description"
+        content="Site plan for the Samoa Dog Care & Adoption website project for WDD 231, including color palette, typography, wireframes, and page structure.">
+
+    <title>Samoa Dog Care & Adoption | Site Plan</title>
+
+    <style>
+        :root {
+            /* From your soft lavender graphic identity */
+            --primary-color: #7F6BAE;
+            /* medium lavender */
+            --accent-color: #C7B7E4;
+            /* light lavender */
+            --bg-color: #EDE6D6;
+            /* soft cream */
+            --text-color: #111111;
+            /* dark text for safe contrast */
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Lato", system-ui, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* HEADER & FOOTER: purple background, ALL text forced to white */
+        header,
+        footer {
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+
+        header *,
+        footer * {
+            color: #ffffff !important;
+            /* kills lavender text in header/footer */
+        }
+
+        header {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+        }
+
+        header p {
+            margin: 0.25rem 0 0;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background-color: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #e2e2e2;
+        }
+
+        h2 {
+            margin-top: 2rem;
+            color: var(--primary-color);
+            font-family: "Poppins", sans-serif;
+        }
+
+        h3 {
+            margin-top: 1rem;
+            font-family: "Poppins", sans-serif;
+            color: var(--text-color);
+        }
+
+        /* All normal text uses dark color */
+        p,
+        span,
+        li {
+            color: var(--text-color);
+        }
+
+        .label {
+            font-weight: 600;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+        }
+
+        .color-swatch {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            border: 1px solid #d6d6d6;
+            background-color: #f8f8f8;
+        }
+
+        .swatch-box {
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            border: 1px solid #bebebe;
+        }
+
+        .swatch-primary {
+            background-color: var(--primary-color);
+        }
+
+        .swatch-accent {
+            background-color: var(--accent-color);
+        }
+
+        .swatch-neutral {
+            background-color: var(--bg-color);
+        }
+
+        code {
+            background: #f3f3f3;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        figure {
+            margin: 1rem 0;
+            padding: 1rem;
+            border: 1px dashed #d6d6d6;
+            border-radius: 6px;
+            background-color: #fafafa;
+        }
+
+        figcaption {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        footer span {
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Samoa Dog Care &amp; Adoption – Site Plan</h1>
+        <p>Individual Website Project – WDD 231</p>
+    </header>
+
+    <main>
+        <!-- 1. Site Name -->
+        <section>
+            <h2>1. Site Name</h2>
+            <p><span class="label">Site Name:</span> <strong>Samoa Dog Care &amp; Adoption</strong></p>
+            <p>
+                <span class="label">Reason for Name:</span>
+                The name explains the purpose clearly: helping people in Samoa learn dog care
+                basics and explore adoptable dogs that need safe homes.
+            </p>
+        </section>
+
+        <!-- 2. Site Purpose -->
+        <section>
+            <h2>2. Site Purpose</h2>
+            <p>The site will provide:</p>
+            <ul>
+                <li>Simple dog care guides tailored to Samoa’s needs.</li>
+                <li>A dynamic page showing adoptable dogs from a JSON data source.</li>
+                <li>Helpful steps for new and current dog owners.</li>
+            </ul>
+            <p>This project helps me practice web development while creating something meaningful for my community.</p>
+        </section>
+
+        <!-- 3. Scenarios -->
+        <section>
+            <h2>3. Scenarios</h2>
+            <ul>
+                <li><strong>Scenario 1:</strong> “Where can I see adoptable dogs in Samoa?”</li>
+                <li><strong>Scenario 2:</strong> “How do I care for my dog properly?”</li>
+                <li><strong>Scenario 3:</strong> “Can I quickly compare dog ages, sizes, and personalities?”</li>
+            </ul>
+        </section>
+
+        <!-- 4. Color Schema -->
+        <section>
+            <h2>4. Color Schema</h2>
+            <p>These colors match the soft lavender graphic identity in my project proposal.</p>
+
+            <div class="color-swatch">
+                <div class="swatch-box swatch-primary"></div>
+                <div>
+                    <p><strong>Primary:</strong> #7F6BAE (Medium Lavender)</p>
+                    <p>Used for header, footer, key headings, and important UI elements.</p>
+                </div>
+            </div>
+
+            <div class="color-swatch">
+                <div class="swatch-box swatch-accent"></div>
+                <div>
+                    <p><strong>Accent:</strong> #C7B7E4 (Light Lavender)</p>
+                    <p>Used for subtle highlights, borders, and decorative accents.</p>
+                </div>
+            </div>
+
+            <div class="color-swatch">
+                <div class="swatch-box swatch-neutral"></div>
+                <div>
+                    <p><strong>Neutral:</strong> #EDE6D6 (Soft Cream)</p>
+                    <p>Used as the main page background behind white content cards.</p>
+                </div>
+            </div>
+
+            <p><em>Note:</em> These colors are used in this document to satisfy the color schema requirement.</p>
+        </section>
+
+        <!-- 5. Typography -->
+        <section>
+            <h2>5. Typography</h2>
+            <p>These fonts match the graphic identity image.</p>
+
+            <h3>Body Font</h3>
+            <p><strong>Lato</strong> – used for all paragraphs, navigation text, and general content.</p>
+
+            <h3>Heading Font</h3>
+            <p><strong>Poppins</strong> – used for the site title and all section headings.</p>
+
+            <p>Both fonts are used in this site-plan document through the CSS rules above.</p>
+        </section>
+
+        <!-- 6. Wireframes -->
+        <section>
+            <h2>6. Wireframes</h2>
+            <figure>
+                <img src="mobilewebframe.png" alt="Mobile wireframe for Samoa Dog Care & Adoption home page">
+                <figcaption>Mobile home-page wireframe (around 320px wide).</figcaption>
+            </figure>
+
+            <figure>
+                <img src="webframe.png" alt="Desktop wireframe for Samoa Dog Care & Adoption home page">
+                <figcaption>Desktop home-page wireframe with hero and card grid layout.</figcaption>
+            </figure>
+        </section>
+
+        <!-- 7. Planned Pages -->
+        <section>
+            <h2>7. Planned Pages</h2>
+            <ul>
+                <li><strong>Home (index.html):</strong> Mission, overview, and links to the two main pages.</li>
+                <li><strong>Dog Care Tips (care.html):</strong> Sections on food, shelter, health, and safety.</li>
+                <li><strong>Adoptable Dogs (adopt.html):</strong> Cards generated from a JSON data source showing key
+                    info for each dog.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Site Plan for <span>Samoa Dog Care &amp; Adoption</span> — WDD 231 Individual Project</p>
+    </footer>
+
+</body>
+
+</html>
