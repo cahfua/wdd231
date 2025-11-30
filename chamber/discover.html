@@ -4,17 +4,21 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Discover stunning natural landmarks, cultural sites, and must-see attractions across Western Samoa. Explore eight top places to visit and learn more about our islands.">
 
     <title>Western Samoa Chamber • Discover</title>
 
-    <link rel="icon" href="../favicon.ico" />
+    <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="../styles/small.css">
-    <link rel="stylesheet" href="../styles/larger.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/chamber.css">
 
-    <script src="../scripts/navigation.js" defer></script>
-    <script src="../scripts/dates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+
+    <script type="module" src="scripts/discover.js"></script>
 </head>
 
 <body>
@@ -38,16 +42,24 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
                 <li><a href="discover.html" class="active" aria-current="page">Discover</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="main">
+    <main id="main" class="discover-main">
+        <section id="visit-message" class="visit-message" aria-live="polite"></section>
+
         <h1>Discover Western Samoa</h1>
-        <p>This page will be developed in a future assignment. For now, this placeholder ensures your navigation remains
-            functional and error-free.</p>
+        <p class="discover-intro">
+            Explore some of the highlights of Western Samoa&mdash;from scenic views to local
+            businesses and community spaces that make our islands unique.
+        </p>
+
+        <section class="discover-grid" aria-label="Places of interest">
+        </section>
     </main>
 
     <footer class="site-footer">
@@ -65,16 +77,16 @@
                         d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.5 8h4V24h-4V8ZM8 8h3.8v2.2h.06C12.7 8.8 14.2 8 16.3 8 21 8 22 11 22 15.2V24h-4v-7.6c0-1.8 0-4.1-2.5-4.1-2.6 0-3 2-3 4V24H8V8Z" />
                 </svg>
             </a>
-            <a href="https://x.com/" target="_blank" rel="noopener" aria-label="Twitter / X"><svg viewBox="0 0 24 24"
-                    aria-hidden="true">
+            <a href="https://x.com/" target="_blank" rel="noopener" aria-label="Twitter / X">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M18.2 2H21l-6.5 7.4L22.3 22h-6.7l-4.7-6.6-5.4 6.6H2.6l7-8.5L1.8 2h6.9l4.3 6 5.2-6Z" />
                 </svg>
             </a>
         </div>
-    
+
         <p>© <span id="year"></span> Celestine Ahfua — Western Samoa</p>
         <p id="lastModified" class="muted"></p>
     </footer>
-    </body>
-    
-    </html>
+</body>
+
+</html>

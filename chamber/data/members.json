@@ -4,7 +4,7 @@
     "address": "Beach Rd, Apia, Samoa",
     "phone": "+685 123-1001",
     "website": "https://islandbreezecafe.example",
-    "image": "island-breeze.png",
+    "image": "island-breeze.webp",
     "membershipLevel": 3,
     "category": "Food & Drink"
   },
@@ -13,7 +13,7 @@
     "address": "Main Wharf, Salelologa, Savai'i",
     "phone": "+685 123-2002",
     "website": "https://savaiitours.example",
-    "image": "savaii-tours.png",
+    "image": "savaii-tours.webp",
     "membershipLevel": 2,
     "category": "Travel"
   },
@@ -22,7 +22,7 @@
     "address": "Market St, Apia",
     "phone": "+685 123-3003",
     "website": "https://pacificcrafts.example",
-    "image": "pacific-crafts.png",
+    "image": "pacific-crafts.webp",
     "membershipLevel": 1,
     "category": "Artisans"
   },
@@ -31,7 +31,7 @@
     "address": "Cape Rd, Upolu",
     "phone": "+685 123-4004",
     "website": "https://oceanviewresort.example",
-    "image": "oceanview.png",
+    "image": "oceanview.webp",
     "membershipLevel": 3,
     "category": "Hospitality"
   },
@@ -40,7 +40,7 @@
     "address": "Beach Rd, Apia",
     "phone": "+685 123-5005",
     "website": "https://samoabikes.example",
-    "image": "bike-rentals.png",
+    "image": "bike-rentals.webp",
     "membershipLevel": 1,
     "category": "Recreation"
   },
@@ -49,7 +49,7 @@
     "address": "Tech Park, Apia",
     "phone": "+685 123-6006",
     "website": "https://lagoonit.example",
-    "image": "lagoon-it.png",
+    "image": "lagoon-it.webp",
     "membershipLevel": 2,
     "category": "Technology"
   },
@@ -58,7 +58,7 @@
     "address": "Finance Ave, Apia",
     "phone": "+685 123-7007",
     "website": "https://coralreefbank.example",
-    "image": "coral-reef-bank.png",
+    "image": "coral-reef-bank.webp",
     "membershipLevel": 2,
     "category": "Financial"
   }
