@@ -32,9 +32,10 @@
     <link rel="stylesheet" href="styles/larger.css">
 
     <!-- Scripts -->
-    <script type="module" src="scripts/navigation.mjs" defer></script>
-    <script type="module" src="scripts/dates.mjs" defer></script>
-    <script type="module" src="scripts/dogs.mjs" defer></script>
+    <script type="module" src="scripts/navigation.mjs"></script>
+    <script type="module" src="scripts/dates.mjs"></script>
+    <script type="module" src="scripts/dogs.mjs"></script>
+    <script type="module" src="scripts/form.mjs"></script>
 </head>
 
 <body>
@@ -117,11 +118,11 @@
 
             <article class="dog-modal-content">
                 <figure class="dog-modal-figure">
-                    <img id="modal-image" src="" alt="" loading="lazy" width="480" height="320">
+                    <img id="modal-image" alt="selected dog photo" loading="lazy" width="480" height="320">
                 </figure>
 
                 <div class="dog-modal-body">
-                    <h2 id="dog-modal-title"></h2>
+                    <h2 id="dog-modal-title">Dog details</h2>
                     <p id="modal-tagline" class="dog-modal-tagline"></p>
 
                     <dl class="dog-modal-details">
