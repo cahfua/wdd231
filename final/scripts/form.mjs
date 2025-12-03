@@ -1,5 +1,3 @@
-// scripts/form.mjs
-
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
 

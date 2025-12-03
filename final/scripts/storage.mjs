@@ -1,10 +1,5 @@
-// scripts/storage.mjs
-
 const FAVORITES_KEY = "samoa-dog-favorites";
 
-/**
- * Safely parse JSON from localStorage.
- */
 function safeParse(json, fallback) {
   try {
     return json ? JSON.parse(json) : fallback;
@@ -35,5 +30,5 @@ export function toggleFavorite(id) {
     : [...favorites, id];
 
   setFavorites(updated);
-  return !exists; // returns new favorite state
+  return !exists;
 }

@@ -1,19 +1,10 @@
-/* ==========================
-   Global Theme + Base Styles
-   Samoa Dog Care & Adoption
-   ========================== */
-
 :root {
-    /* Colors from your site plan */
     --color-bg: #ede6d6;
     --color-surface: #ffffff;
     --color-primary: #7f6bae;
-    /* medium lavender */
     --color-primary-soft: #c7b7e4;
-    /* light lavender */
     --color-primary-strong: #5d4a8c;
     --color-accent: #f59e0b;
-    /* warm accent (buttons, chips) */
     --color-text: #1f2933;
     --color-muted: #4b5563;
     --color-border: #e5e7eb;
@@ -30,7 +21,6 @@
         "Segoe UI", sans-serif;
 }
 
-/* Box sizing reset */
 *,
 *::before,
 *::after {
@@ -94,15 +84,11 @@ a:focus-visible {
     text-decoration: underline;
 }
 
-/* Layout shell */
-
 main {
     max-width: 1100px;
     margin: 0 auto;
     padding: 1.5rem 1rem 3rem;
 }
-
-/* Utility */
 
 .visually-hidden {
     position: absolute;
@@ -116,7 +102,6 @@ main {
     border: 0;
 }
 
-/* Layout: sticky footer */
 body {
     min-height: 100vh;
     display: flex;
@@ -264,10 +249,8 @@ main {
     text-decoration: none;
 }
 
-/* 🔥 Accessible primary button (solid dark purple) */
 .btn-primary {
     background-color: #2e1065;
-    /* very dark purple */
     color: #ffffff;
     box-shadow: var(--shadow-soft);
 }
@@ -275,11 +258,9 @@ main {
 .btn-primary:hover,
 .btn-primary:focus-visible {
     background-color: #220b46;
-    /* darker on hover/focus */
     color: #ffffff;
 }
 
-/* Secondary button keeps light lavender but dark text */
 .btn-secondary {
     background-color: var(--color-primary-soft);
     color: #3a2d62;
@@ -363,8 +344,6 @@ main {
     font-size: 0.8rem;
     opacity: 0.95;
 }
-
-/* Simple list reset */
 
 ul.clean {
     list-style: none;

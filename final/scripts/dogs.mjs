@@ -1,5 +1,3 @@
-// scripts/dogs.mjs
-
 import { getFavorites, toggleFavorite, isFavorite } from "./storage.mjs";
 
 const DATA_URL = "data/dogs.json";
@@ -73,7 +71,6 @@ function applyFilters(list) {
     filtered = filtered.filter((dog) => favIds.includes(dog.id));
   }
 
-  // Just a friendly sort by age then name, for consistency
   filtered.sort((a, b) => a.ageYears - b.ageYears || a.name.localeCompare(b.name));
 
   return filtered;
@@ -193,11 +190,11 @@ function openDogModal(id) {
   modalGoodWith.textContent = dog.goodWith.join(", ");
   modalDescription.textContent = dog.description;
 
-  // Favorite button state
+  // Favorite button
   const fav = isFavorite(dog.id);
   updateModalFavoriteButton(fav);
 
-  // Apply link -> prefill dog name on form page
+  // Apply link
   if (modalApplyLink) {
     modalApplyLink.href = `form.html?dog=${encodeURIComponent(dog.name)}`;
   }
@@ -205,7 +202,6 @@ function openDogModal(id) {
   if (typeof modal.showModal === "function") {
     modal.showModal();
   } else {
-    // fallback
     modal.setAttribute("open", "true");
   }
 }
@@ -260,13 +256,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       if (action === "favorite") {
         const nowFav = toggleFavorite(id);
-        // update list button text/state
         const cardBtn = dogListEl.querySelector(`button[data-action="favorite"][data-id="${id}"]`);
         if (cardBtn) {
           cardBtn.classList.toggle("is-favorite", nowFav);
           cardBtn.textContent = nowFav ? "Saved" : "Save Favorite";
         }
-        // also update modal button if it's open for this dog
         if (currentDogId === id) {
           updateModalFavoriteButton(nowFav);
         }
@@ -274,10 +268,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  // Modal close button
   modal?.querySelector("[data-close-modal]")?.addEventListener("click", closeDogModal);
 
-  // Close modal on backdrop click
   if (modal) {
     modal.addEventListener("click", (event) => {
       const rect = modal.getBoundingClientRect();
@@ -292,7 +284,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     });
 
-    // Escape key closes modal
     modal.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         closeDogModal();
@@ -300,13 +291,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  // Modal favorite button
   if (modalFavoriteBtn) {
     modalFavoriteBtn.addEventListener("click", () => {
       if (!currentDogId) return;
       const nowFav = toggleFavorite(currentDogId);
       updateModalFavoriteButton(nowFav);
-      // sync list card
       const cardBtn = dogListEl?.querySelector(
         `button[data-action="favorite"][data-id="${currentDogId}"]`
       );

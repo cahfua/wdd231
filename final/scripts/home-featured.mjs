@@ -1,6 +1,3 @@
-// scripts/home-featured.mjs
-// Show 3 random featured dogs on the home page
-
 const DATA_URL = "data/dogs.json";
 
 // Basic age group helper for the chip
@@ -11,7 +8,6 @@ function getAgeGroup(ageYears) {
   return "senior";
 }
 
-// Build a compact dog card for the home page
 function createFeaturedDogCard(dog) {
   const name =
     dog.name || dog.dogName || "Adoptable Dog";
@@ -44,7 +40,6 @@ function createFeaturedDogCard(dog) {
 
   const ageGroup = getAgeGroup(ageYears);
 
-  // Try to get a stable id for deep-linking
   const id =
     dog.id ||
     dog.slug ||
@@ -99,7 +94,6 @@ function createFeaturedDogCard(dog) {
   return article;
 }
 
-// Shuffle helper to randomize the list
 function shuffle(array) {
   const copy = [...array];
   for (let i = copy.length - 1; i > 0; i--) {
@@ -113,7 +107,6 @@ async function initFeaturedDogs() {
   const grid = document.querySelector("#featured-dog-grid");
   if (!grid) return;
 
-  // Use the compact layout style you already have in CSS
   grid.classList.add("dog-grid--compact");
 
   try {

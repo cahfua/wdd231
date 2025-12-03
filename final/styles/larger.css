@@ -3,10 +3,8 @@
    (tablet and up)
 ========================== */
 
-/* 700px and up: general layout, nav row, hero 2-column, grids, etc. */
 @media (min-width: 700px) {
 
-    /* hide hamburger, show nav inline */
     .hamburger {
         display: none;
     }
@@ -26,12 +24,10 @@
         margin-top: 0;
     }
 
-    /* main spacing */
     main {
         padding-inline: 1.25rem;
     }
 
-    /* HERO: 2 columns (text + image) */
     .hero {
         grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
         align-items: center;
@@ -41,7 +37,6 @@
         max-height: 340px;
     }
 
-    /* Optional home grid (if used anywhere) */
     .home-grid {
         grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
         align-items: flex-start;
@@ -51,12 +46,10 @@
         grid-column: 1 / -1;
     }
 
-    /* Care page: 2 columns */
     .care-grid {
         grid-template-columns: 1.1fr 1.1fr;
     }
 
-    /* Adopt filters layout */
     .adopt-controls form {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         align-items: flex-end;
@@ -66,7 +59,6 @@
         justify-content: flex-end;
     }
 
-    /* Dog grid: 2 columns */
     #dog-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -75,14 +67,12 @@
         grid-template-columns: minmax(0, 1.1fr);
     }
 
-    /* Featured dogs on home: make sure cards sit nicely in a row */
     #featured-dog-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         align-items: stretch;
     }
 }
 
-/* 900px and up: header logo left, nav right */
 @media (min-width: 900px) {
     .site-header {
         display: flex;
@@ -107,23 +97,19 @@
     }
 }
 
-/* 960px and up: wider grids and dialog */
 @media (min-width: 960px) {
     main {
         padding-inline: 0;
     }
 
-    /* Home grid 3 columns (if used) */
     .home-grid {
         grid-template-columns: 1.7fr 1.3fr 1.4fr;
     }
 
-    /* Dog grid: 3 columns if enough width */
     #dog-list {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    /* Modal width */
     dialog {
         max-width: 540px;
     }
