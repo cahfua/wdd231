@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Samoa Dog Care & Adoption • Adoption Form</title>
+
+    <meta name="description"
+        content="Submit an adoption interest form for a Samoa Dog Care & Adoption dog. Your information will be reviewed by the shelter.">
+    <meta name="author" content="Celestine Ahfua">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Adoption Interest Form • Samoa Dog Care">
+    <meta property="og:description"
+        content="Share your details and living situation to start the dog adoption process in Samoa.">
+    <meta property="og:image" content="https://cahfua.github.io/wdd231/final/images/hero.webp">
+    <meta property="og:url" content="https://cahfua.github.io/wdd231/final/form.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/navigation.mjs" defer></script>
+    <script type="module" src="scripts/dates.mjs" defer></script>
+    <script type="module" src="scripts/form.mjs" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <img src="images/finals_logo.png" alt="Samoa Dog Care & Adoption logo" class="logo">
+            <span>Samoa Dog Care & Adoption</span>
+        </a>
+
+        <button id="menu" class="hamburger" type="button" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav id="primary-nav" class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="care.html">Care Tips</a></li>
+                <li><a href="adopt.html">Adopt</a></li>
+                <li><a href="form.html" class="active" aria-current="page">Apply</a></li>
+                <li><a href="attributions.html">Attributions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="form-main">
+        <header class="page-header">
+            <h1>Adoption Interest Form</h1>
+            <p class="intro">
+                Fill out the form below to express your interest in adopting a dog. A shelter or rescue partner will
+                contact you with next steps.
+            </p>
+        </header>
+
+        <section class="form-section">
+            <!-- NOTE: novalidate removed so required fields will be enforced -->
+            <form method="get"
+                  action="thankyou.html"
+                  class="adoption-form apply-form"
+                  id="adoption-form">
+                <fieldset>
+                    <legend>Your Information</legend>
+
+                    <label>
+                        Full Name*
+                        <input type="text" name="name" required autocomplete="name" title="Enter your full name">
+                    </label>
+
+                    <label>
+                        Email*
+                        <input type="email" name="email" required autocomplete="email"
+                            title="Enter a valid email address">
+                    </label>
+
+                    <label>
+                        Mobile Phone*
+                        <input type="tel" name="phone" required autocomplete="tel" title="Enter your mobile number">
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Dog &amp; Home Details</legend>
+
+                    <label>
+                        Dog ID or Name
+                        <input type="text" name="dog" id="dog-field" placeholder="Optional: from Adopt page">
+                    </label>
+
+                    <label>
+                        Housing Type*
+                        <select name="housing" required>
+                            <option value="">Select one…</option>
+                            <option value="village-home">Village home with yard</option>
+                            <option value="fenced-yard">Fenced yard</option>
+                            <option value="indoor-mostly">Indoor mostly</option>
+                            <option value="shared-property">Shared property</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Have you owned dogs before?*
+                        <select name="experience" required>
+                            <option value="">Select one…</option>
+                            <option value="first-time">This is my first dog</option>
+                            <option value="some-experience">I have had 1–2 dogs</option>
+                            <option value="experienced">I have owned several dogs</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Tell us about your home and why you want to adopt*
+                        <textarea name="message" rows="4" required
+                            title="Briefly describe your home and reasons for adopting"></textarea>
+                    </label>
+                </fieldset>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+                <input type="submit" value="Submit Application" class="btn-primary">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Celestine Ahfua — Samoa</p>
+        <a href="https://youtu.be/example" target="_blank">Project Video Demonstration</a>
+    </footer>
+</body>
+
+</html>

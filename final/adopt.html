@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Samoa Dog Care & Adoption • Adopt</title>
+
+    <meta name="description"
+        content="Browse adoptable dogs in Samoa. Filter by size and age, view details in a modal, and save favorites for later.">
+    <meta name="author" content="Celestine Ahfua">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Adoptable Dogs • Samoa Dog Care">
+    <meta property="og:description"
+        content="Discover adoptable dogs in Samoa and learn how to give them a safe, loving home.">
+    <meta property="og:image" content="https://cahfua.github.io/wdd231/final/images/hero.webp">
+    <meta property="og:url" content="https://cahfua.github.io/wdd231/final/adopt.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/navigation.mjs" defer></script>
+    <script type="module" src="scripts/dates.mjs" defer></script>
+    <script type="module" src="scripts/dogs.mjs" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <img src="images/finals_logo.png" alt="Samoa Dog Care & Adoption logo" class="logo">
+            <span>Samoa Dog Care & Adoption</span>
+        </a>
+
+        <button id="menu" class="hamburger" type="button" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav id="primary-nav" class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="care.html">Care Tips</a></li>
+                <li><a href="adopt.html" class="active" aria-current="page">Adopt</a></li>
+                <li><a href="form.html">Apply</a></li>
+                <li><a href="attributions.html">Attributions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="adopt-main">
+        <header class="page-header">
+            <h1>Adoptable Dogs</h1>
+            <p class="intro">
+                Browse dogs currently looking for safe and loving homes in Samoa. Use the filters to quickly find dogs
+                that match your family's needs.
+            </p>
+        </header>
+
+        <!-- FILTER + VIEW CONTROLS -->
+        <section class="adopt-controls" aria-label="Filter and view options">
+            <div class="filters">
+                <label>
+                    Size
+                    <select id="size-filter">
+                        <option value="all">Any size</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                    </select>
+                </label>
+
+                <label>
+                    Age
+                    <select id="age-filter">
+                        <option value="all">Any age</option>
+                        <option value="puppy">Puppy (0–1)</option>
+                        <option value="adult">Adult (2–7)</option>
+                        <option value="senior">Senior (8+)</option>
+                    </select>
+                </label>
+
+                <label>
+                    Show
+                    <select id="show-filter">
+                        <option value="all">All dogs</option>
+                        <option value="favorites">My favorites</option>
+                    </select>
+                </label>
+            </div>
+
+            <button id="clear-filters" type="button" class="chip">Clear filters</button>
+        </section>
+
+        <!-- DYNAMIC DOG GRID -->
+        <section aria-live="polite">
+            <h2 class="visually-hidden">Dog results</h2>
+            <div id="dog-list" class="dog-grid"></div>
+        </section>
+
+        <!-- MODAL DIALOG FOR DOG DETAILS -->
+        <dialog id="dog-modal" aria-labelledby="dog-modal-title">
+            <button type="button" class="modal-close" data-close-modal aria-label="Close details">
+                ×
+            </button>
+
+            <article class="dog-modal-content">
+                <figure class="dog-modal-figure">
+                    <img id="modal-image" src="" alt="" loading="lazy" width="480" height="320">
+                </figure>
+
+                <div class="dog-modal-body">
+                    <h2 id="dog-modal-title"></h2>
+                    <p id="modal-tagline" class="dog-modal-tagline"></p>
+
+                    <dl class="dog-modal-details">
+                        <div>
+                            <dt>Age</dt>
+                            <dd id="modal-age"></dd>
+                        </div>
+                        <div>
+                            <dt>Size</dt>
+                            <dd id="modal-size"></dd>
+                        </div>
+                        <div>
+                            <dt>Gender</dt>
+                            <dd id="modal-gender"></dd>
+                        </div>
+                        <div>
+                            <dt>Location</dt>
+                            <dd id="modal-location"></dd>
+                        </div>
+                        <div>
+                            <dt>Temperament</dt>
+                            <dd id="modal-temperament"></dd>
+                        </div>
+                        <div>
+                            <dt>Good with</dt>
+                            <dd id="modal-good-with"></dd>
+                        </div>
+                    </dl>
+
+                    <p id="modal-description" class="dog-modal-description"></p>
+
+                    <div class="dog-modal-actions">
+                        <button id="modal-favorite-btn" type="button" class="btn-secondary">
+                            Save to favorites
+                        </button>
+
+                        <a id="modal-apply-link" href="form.html" class="btn-primary">
+                            Apply for this Dog
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </dialog>
+
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Celestine Ahfua — Samoa</p>
+        <a href="https://youtu.be/example" target="_blank">Project Video Demonstration</a>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,725 @@
+/* =========================================
+   MOBILE-FIRST BASE STYLES
+   Global spacing, typography, structure
+========================================= */
+
+/* Make footer sit at bottom on short pages */
+html,
+body {
+    height: 100%;
+    background-color: #ede6d6;
+    color: #1f2937;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Header / Navigation */
+.site-header {
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* brand = logo + title */
+.site-header .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+/* Bigger, clearer logo */
+.site-header .logo {
+    max-height: 90px;
+    width: auto;
+    display: block;
+}
+
+/* Title text next to logo */
+.site-header .brand span {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary-strong, #4b1d95);
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+}
+
+/* Stronger page headings */
+main h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1.9rem, 1.2rem + 1vw, 2.4rem);
+    font-weight: 800;
+    color: var(--color-primary-strong, #4b1d95);
+    margin-bottom: 0.75rem;
+}
+
+main h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-primary-strong, #4b1d95);
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* =========================================
+   HOME PAGE (index.html)
+========================================= */
+
+/* Landing layout container */
+.home-main {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+/* Main hero: text + image stacked on small screens */
+.hero {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-card);
+    padding: 1.6rem 1.5rem;
+    box-shadow: var(--shadow-soft);
+    display: grid;
+    gap: 1.2rem;
+}
+
+/* Hero text */
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.hero-text h1 {
+    margin: 0;
+}
+
+/* Eyebrow + subtitle */
+.hero-eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #6b21a8;
+}
+
+.hero-subtitle {
+    font-size: 0.98rem;
+    color: var(--color-muted);
+}
+
+/* Hero CTA row */
+.hero-actions {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+/* Buttons */
+
+/* Ghost button style */
+.btn-ghost {
+    border-radius: var(--radius-pill, 999px);
+    padding: 0.5rem 0.95rem;
+    font-size: 0.9rem;
+    border: 1px solid var(--color-border, #e5e7eb);
+    background-color: transparent;
+    color: var(--color-primary-strong, #4b1d95);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Primary button: dark purple on white (AA+) */
+a.btn-primary,
+button.btn-primary,
+input[type="submit"].btn-primary,
+.btn-primary {
+    background-color: #2e1065;
+    color: #ffffff;
+    border: none;
+}
+
+a.btn-primary:hover,
+a.btn-primary:focus-visible,
+button.btn-primary:hover,
+button.btn-primary:focus-visible,
+input[type="submit"].btn-primary:hover,
+input[type="submit"].btn-primary:focus-visible,
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    background-color: #1f0b46;
+    color: #ffffff;
+}
+
+/* Secondary button */
+.btn-secondary {
+    background-color: #e5ddff;
+    color: #3b0764;
+    border: 1px solid #c4b5fd;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+    background-color: #ddd6fe;
+}
+
+/* Hero image */
+.hero picture {
+    margin: 0;
+    max-height: 260px;
+    overflow: hidden;
+    border-radius: var(--radius-card);
+}
+
+.hero picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Optional hook around hero image */
+.hero-media {
+    margin: 0;
+}
+
+/* Hero stats row */
+.hero-stats-row {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.75rem;
+}
+
+.hero-stat-card {
+    padding: 0.7rem 0.75rem;
+    border-radius: 0.9rem;
+    background-color: #e0d4ff;
+}
+
+.hero-stat-number {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #4b1d95;
+    margin-bottom: 0.1rem;
+}
+
+.hero-stat-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+/* Generic "home section" cards */
+.home-section {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-card);
+    padding: 1.3rem 1.2rem;
+    box-shadow: var(--shadow-soft);
+}
+
+/* QUICK ACTIONS section */
+.home-actions h2 {
+    margin-bottom: 0.75rem;
+}
+
+.home-actions-grid {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.home-action-card {
+    padding: 0.9rem 0.95rem;
+    border-radius: 0.9rem;
+    border: 1px solid var(--color-border, #e5e7eb);
+    background-color: #f9fafb;
+}
+
+.home-action-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+}
+
+.home-action-card p {
+    margin-bottom: 0.4rem;
+    font-size: 0.94rem;
+}
+
+.home-action-card .card-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary-strong, #4b1d95);
+    text-decoration: none;
+}
+
+/* FEATURED DOGS section */
+.featured-dogs {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* 3 neat cards across; 1–2 on smaller widths */
+#featured-dog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+/* Card look inside featured list */
+#featured-dog-grid .dog-card {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    background-color: var(--color-surface);
+}
+
+/* More compact image for featured cards */
+#featured-dog-grid .dog-figure {
+    margin: 0;
+    max-height: 180px;
+    overflow: hidden;
+}
+
+#featured-dog-grid .dog-figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Featured section footer (See all dogs) */
+.home-section-footer {
+    margin-top: 0.75rem;
+    text-align: right;
+}
+
+/* Footer link should be clearly a link */
+footer a {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* WHY IT MATTERS section */
+.home-why h2 {
+    margin-bottom: 0.6rem;
+}
+
+.home-why-grid {
+    display: grid;
+    gap: 0.7rem;
+    font-size: 0.95rem;
+}
+
+.home-why-grid ul {
+    padding-left: 1.1rem;
+}
+
+/* =========================================
+   CARE PAGE (care.html)
+========================================= */
+
+.care-intro {
+    margin-bottom: 1.2rem;
+}
+
+/* Make the intro text darker for extra contrast */
+.care-intro p,
+p.care-intro {
+    color: #4b1d95;
+    /* dark brand purple, AAA contrast */
+}
+
+.care-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.care-card {
+    padding-bottom: 1.1rem;
+}
+
+.care-card h2 {
+    margin-bottom: 0.4rem;
+}
+
+.care-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.care-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.care-checklist li {
+    display: flex;
+    gap: 0.4rem;
+    font-size: 0.94rem;
+    margin-bottom: 0.35rem;
+}
+
+.care-checklist span {
+    flex-shrink: 0;
+}
+
+/* =========================================
+   ADOPT PAGE (adopt.html)
+========================================= */
+
+.adopt-header {
+    margin-bottom: 1rem;
+}
+
+.adopt-controls {
+    margin-bottom: 1rem;
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius-card);
+    border: 1px solid var(--color-border);
+    background-color: #f9fafb;
+}
+
+.adopt-controls form {
+    display: grid;
+    gap: 0.6rem;
+}
+
+.adopt-controls label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    color: #374151;
+}
+
+.adopt-controls select {
+    padding: 0.5rem 0.6rem;
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    background-color: #ffffff;
+}
+
+.filter-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0.4rem;
+}
+
+/* Dog Grid */
+
+#dog-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.dog-card {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-subtle);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    display: grid;
+}
+
+/* Dog media */
+.dog-figure {
+    margin: 0;
+    max-height: 230px;
+    overflow: hidden;
+}
+
+.dog-figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Shared dog body styles */
+.dog-body {
+    padding: 1rem 1rem 1.1rem;
+}
+
+.dog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    margin-bottom: 0.4rem;
+}
+
+.dog-header h3 {
+    margin-bottom: 0;
+}
+
+.dog-tagline {
+    font-size: 0.92rem;
+    margin-bottom: 0.7rem;
+}
+
+/* Chips */
+
+.dog-chip {
+    padding: 0.22rem 0.7rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.dog-chip--puppy {
+    background-color: #dcfce7;
+    color: #0b4224;
+    border: 1px solid #bbf7d0;
+}
+
+/* Adult chip: boosted contrast */
+.dog-chip--adult {
+    background-color: #bfdbfe;
+    color: #0b1120;
+    border: 1px solid #93c5fd;
+}
+
+.dog-chip--senior {
+    background-color: #fee2e2;
+    color: #7f1d1d;
+    border: 1px solid #fecaca;
+}
+
+.dog-meta {
+    margin: 0 0 0.6rem;
+    padding: 0;
+    display: grid;
+    gap: 0.3rem 0.8rem;
+    grid-template-columns: 1fr 1fr;
+    font-size: 0.86rem;
+}
+
+.dog-meta dt {
+    font-weight: 600;
+    color: #374151;
+}
+
+.dog-meta dd {
+    margin: 0;
+    color: var(--color-muted);
+}
+
+.dog-temperament,
+.dog-good-with {
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
+}
+
+.dog-actions {
+    margin-top: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+/* Favorite button */
+.dog-fav-btn.is-favorite,
+#modal-favorite-btn.is-favorite {
+    background-color: #16a34a;
+    color: #f9fafb;
+}
+
+.error {
+    color: #b91c1c;
+    text-align: center;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 1.2rem;
+    border-radius: 0.75rem;
+    background-color: #f3f4ff;
+    color: #4338ca;
+}
+
+/* =========================================
+   DOG MODAL <dialog>
+========================================= */
+
+dialog {
+    border: none;
+    border-radius: 0.9rem;
+    padding: 1.4rem 1.3rem 1.5rem;
+    max-width: 480px;
+    width: 90%;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.35);
+    background-color: var(--color-surface);
+}
+
+dialog::backdrop {
+    background-color: rgba(15, 23, 42, 0.6);
+}
+
+.modal-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    margin-bottom: 0.75rem;
+}
+
+.modal-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 0.8rem;
+    object-fit: cover;
+}
+
+.modal-header-text {
+    flex: 1;
+}
+
+#dog-modal-title {
+    margin-bottom: 0.2rem;
+}
+
+#modal-tagline {
+    font-size: 0.88rem;
+}
+
+.modal-meta-grid {
+    display: grid;
+    gap: 0.35rem 0.75rem;
+    grid-template-columns: 1fr 1fr;
+    font-size: 0.86rem;
+    margin-bottom: 0.6rem;
+}
+
+.modal-meta-grid dt {
+    font-weight: 600;
+    color: #374151;
+}
+
+.modal-meta-grid dd {
+    margin: 0;
+    color: var(--color-muted);
+}
+
+.modal-description {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.modal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: flex-end;
+    margin-top: 0.75rem;
+}
+
+/* =========================================
+   FORM PAGE (form.html)
+========================================= */
+
+.form-intro {
+    margin-bottom: 1.1rem;
+}
+
+/* Style both .apply-form and .adoption-form */
+.apply-form,
+.adoption-form {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.apply-form label,
+.adoption-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.apply-form input,
+.apply-form select,
+.apply-form textarea,
+.adoption-form input,
+.adoption-form select,
+.adoption-form textarea {
+    padding: 0.55rem 0.7rem;
+    border-radius: 0.55rem;
+    border: 1px solid #d1d5db;
+    font: inherit;
+    background-color: #ffffff;
+}
+
+.apply-form textarea,
+.adoption-form textarea {
+    min-height: 5.5rem;
+    resize: vertical;
+}
+
+/* =========================================
+   THANK YOU PAGE (thankyou.html)
+========================================= */
+
+.thankyou-card {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* Summary list styles */
+.summary-list {
+    margin: 1rem 0 0.5rem;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.5rem 1rem;
+}
+
+.summary-list dt,
+.summary-label {
+    font-size: 0.86rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+.summary-list dd,
+.summary-value {
+    font-size: 0.98rem;
+    color: var(--color-text);
+}
+
+/* =========================================
+   ATTRIBUTIONS PAGE (attributions.html)
+========================================= */
+
+.attributions-main {
+    max-width: 800px;
+}
+
+.attributions-main ul {
+    padding-left: 1.1rem;
+}
+
+.attributions-main li a {
+    text-decoration: underline;
+    font-weight: 600;
+}

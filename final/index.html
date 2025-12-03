@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Samoa Dog Care & Adoption • Home</title>
+
+    <meta name="description"
+        content="Learn dog care basics, explore adoptable dogs in Samoa, and support local shelters working to protect stray animals.">
+    <meta name="author" content="Celestine Ahfua">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Samoa Dog Care & Adoption">
+    <meta property="og:description"
+        content="Helping stray dogs in Samoa find safe homes through education and adoption resources.">
+    <meta property="og:image" content="https://cahfua.github.io/wdd231/final/images/hero.webp">
+    <meta property="og:url" content="https://cahfua.github.io/wdd231/final/index.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/navigation.mjs" defer></script>
+    <script type="module" src="scripts/dates.mjs" defer></script>
+    <script type="module" src="scripts/home-featured.mjs" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <img src="images/finals_logo.png" alt="Project Logo" class="logo">
+            <span>Samoa Dog Care & Adoption</span>
+        </a>
+
+        <button id="menu" class="hamburger" type="button" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav id="primary-nav" class="nav">
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="care.html">Care Tips</a></li>
+                <li><a href="adopt.html">Adopt</a></li>
+                <li><a href="form.html">Apply</a></li>
+                <li><a href="attributions.html">Attributions</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-main">
+
+        <!-- HERO -->
+        <section class="hero home-hero">
+            <div class="hero-text">
+                <p class="hero-eyebrow">For dogs, families, and villages in Samoa</p>
+                <h1>Help Samoa’s Dogs Find Safe, Loving Homes</h1>
+                <p class="hero-subtitle">
+                    Learn simple dog care, explore adoptable dogs, and see how you can support shelters and village
+                    rescues across Samoa.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="adopt.html" class="btn-primary">Browse Adoptable Dogs</a>
+                    <a href="care.html" class="btn-secondary">Learn Dog Care Basics</a>
+                    <a href="form.html" class="btn-ghost">Start an Application</a>
+                </div>
+
+                <div class="hero-stats-row">
+                    <div class="hero-stat-card">
+                        <span class="hero-stat-number">15+</span>
+                        <span class="hero-stat-label">dogs in our sample list</span>
+                    </div>
+                    <div class="hero-stat-card">
+                        <span class="hero-stat-number">4</span>
+                        <span class="hero-stat-label">core care topics in Samoan context</span>
+                    </div>
+                    <div class="hero-stat-card">
+                        <span class="hero-stat-number">1</span>
+                        <span class="hero-stat-label">simple way to get started today</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-media">
+                <picture>
+                    <img src="images/hero.jpg"
+                        alt="Friendly dog in Samoa standing near a village home"
+                        loading="eager"
+                        width="1600"
+                        height="800">
+                </picture>
+            </div>
+        </section>
+
+        <!-- QUICK ACTIONS -->
+        <section class="home-section home-actions">
+            <h2>Choose how you want to help</h2>
+            <div class="home-actions-grid">
+                <article class="home-action-card">
+                    <h3>New to dog ownership?</h3>
+                    <p>Start with basic tips on food, shelter, health, and keeping village dogs safe around people.</p>
+                    <a href="care.html" class="card-link">Read care tips</a>
+                </article>
+
+                <article class="home-action-card">
+                    <h3>Ready to meet dogs?</h3>
+                    <p>Browse a list of adoptable dogs with ages, sizes, and personalities to match your home.</p>
+                    <a href="adopt.html" class="card-link">View adoptable dogs</a>
+                </article>
+
+                <article class="home-action-card">
+                    <h3>Already have a favorite?</h3>
+                    <p>Use the simple form to send your information and tell us about your home and family.</p>
+                    <a href="form.html" class="card-link">Submit an application</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- FEATURED DOG PREVIEW -->
+        <section class="home-section home-featured">
+            <header class="home-section-header">
+                <h2>Featured Dogs from Our List</h2>
+                <p>Here are a few dogs from our sample data. Click a card to see more details on the Adopt page.</p>
+            </header>
+
+            <!-- Populated dynamically from dogs.mjs -->
+            <div id="featured-dog-grid" class="dog-grid dog-grid--compact"></div>
+
+            <div class="home-section-footer">
+                <a href="adopt.html" class="btn-secondary">See all dogs</a>
+            </div>
+        </section>
+
+        <!-- INFO STRIP / WHY IT MATTERS -->
+        <section class="home-section home-why">
+            <h2>Why Samoa Dog Care &amp; Adoption exists</h2>
+            <div class="home-why-grid">
+                <p>
+                    In many Samoan villages, dogs roam freely, protect homes, and live close to families&mdash;but they
+                    don’t always get the food, shelter, or medical care they need. This project was created to bring
+                    together simple education and a sample adoption list in one place.
+                </p>
+                <ul>
+                    <li>Teach families how to care for village dogs with what they already have.</li>
+                    <li>Show clear information about dogs ready for new homes.</li>
+                    <li>Make it easier to take a first step&mdash;learning, visiting, or adopting.</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Celestine Ahfua — Samoa</p>
+        <a href="https://youtu.be/example" target="_blank">Project Video Demonstration</a>
+    </footer>
+
+</body>
+
+</html>
